@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Futuristic Store</title>
+	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+	<h1>Impact Motors Ltd.</h1>
+		<button id = "car" onclick="document.location ='C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Cars.html'">Cars</button>
+		<button id = "robot" onclick="document.location='C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Robots.html'">Robots</button>
+		<button id = "game" onclick="document.location = 'C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Game.html'" target = "_blank">Game</button>
+		<button id = "ceo" onclick="document.location = 'C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/About Us.html'">About Us</button>
+	
+	<style type="text/css">
+	body{
+		height: 100%;
+		display: grid;
+		grid-template-columns: repeat(10, 1fr);
+		grid-template-rows: repeat(16, 0.296fr);
+		/*background-image: linear-gradient(250deg, black, white);*/
+		background-image: url(https://themepack.me/i/c/749x468/media/g/149/iron-man-theme-3.jpg);
+		background-repeat: no-repeat;
+  		background-size: 1600px;
+	}
+	
+	h1{
+		text-align: center;
+		font-family: 'Anton', sans-serif;
+		color: white;
+		font-size: 50px;
+		grid-area: 1/4/2/8;
+		text-shadow: 5px 10px 5px black;
+		animation: slideHim 2s ease;
+	}
+
+	button{
+		font-family: 'Sansita Swashed', cursive;
+		font-weight: bold;
+		font-size: 25px;
+		border-radius: 20px;
+		background-color: transparent;
+		color: white;
+		border: none;
+	}
+
+	#car{
+		grid-area: 5/4/6/8;
+		animation: slideHim 3s ease;
+	}
+
+	#robot{
+		grid-area: 7/4/8/8;
+		animation: slideHim 3s ease;
+	}
+
+	#game{
+		grid-area: 9/4/10/8;
+		animation: slideHim 3s ease;
+	}
+
+	#ceo{
+		grid-area: 11/4/12/8;
+		animation: slideHim 3s ease;
+	}
+
+	button:hover{
+		transform: scale(0.95);
+		transition: 0.4s;
+		box-shadow: 5px 10px 5px black;
+		background-color: #2980b9;
+	}
+
+	button:active{
+		transform: scale(0.9);
+		transition: 0.2s;
+		outline: none;
+	}
+
+	@keyframes slideHim{
+		0%{
+			transform: translateY(210px);
+			opacity: 0;
+		}
+	}
+	</style>
+</body>
+</html>

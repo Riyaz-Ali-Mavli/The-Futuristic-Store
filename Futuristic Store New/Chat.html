@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat Box</title>
+</head>
+<body>
+	<audio autoplay>
+		<source src = "file:///C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Audio Files/Bot/bot2.mp3" type = "audio/mpeg">
+	</audio>
+	<div class = "flex">
+		<div>
+			<h1>Bot Chat</h1>
+		</div>
+		<div id = "result">
+			
+		</div>
+		<div class="input">
+			<input type="text" id="ans" placeholder = "Please enter response" required>
+		</div>
+		<div class = "answer">
+			
+		</div>
+		<button onclick="document.location = 'file:///C:/Users/pc/Desktop/Riyaz%20Ali%20Mavli/udemy/Web%20Development/My%20Project/Futuristic%20Store%20New/Cars.html'">Go Back</button>
+	</div>
+	<script type="text/javascript">
+		var answer = document.querySelector(".answer");
+		var quest = ["What's your name?", "Where are you from?", "What's your budget?", "It was nice talking to you."];
+		var num = 0;
+		var ans1 = "";
+		var ans2 = 0;
+		var output = document.querySelector("#result");
+		var inputBox = document.querySelector("input");
+
+		output.innerHTML = quest[0];
+
+
+		//Answers	
+		function showResponse(){
+			if(inputBox.value == ""){
+				alert("Please provide input!!");
+			}else{
+				if(num == 0){
+					var data = output.innerHTML = `Hello ${inputBox.value}, Nice Meeting You!!`;
+					ans1 = inputBox.value;
+					++num;
+					inputBox.style.visibility = "hidden";
+					setTimeout(changeQuestion, 2000);
+				} else if(num == 1){
+					output.innerHTML = `${inputBox.value}, is a nice place`;
+					inputBox.value = "";
+					++num;
+					inputBox.style.visibility = "hidden";
+					setTimeout(changeQuestion, 2000);
+				} else if(num == 2){
+					output.innerHTML = `${inputBox.value}, is a good budget`;
+					ans2 = inputBox.value;
+					inputBox.value = "";
+					++num;
+					inputBox.parentNode.removeChild(inputBox);
+					setTimeout(changeQuestion, 2000);
+					setTimeout(finalAns, 3000)
+				}
+ 			}
+		}
+
+		function changeQuestion(){
+			inputBox.value = "";
+			output.innerHTML = quest[num];
+			inputBox.style.visibility = "visible";
+		}
+
+		inputBox.addEventListener("keypress", function(e){
+			if(e.keyCode == 13){
+				output.innerHTML = ""
+				showResponse();
+			}
+		})
+
+		function finalAns(){
+			if(localStorage.getItem("value") == "car"){
+				if (Number(ans2) >= 1000000 && Number(ans2) <2000000){
+						output.innerHTML = "You should go for Corvette";
+				}
+
+				else if (Number(ans2) >= 2000000 && Number(ans2) < 3000000){
+					output.innerHTML = "You should go for Lamborghini";
+				}	
+
+				else if (Number(ans2) >= 3000000 && Number(ans2) < 4000000){
+					output.innerHTML = "You should go for Aston Martin";
+				}
+
+				else if (Number(ans2) >= 4000000 && Number(ans2) < 5000000){
+					output.innerHTML = "You should go for Mercedes";
+				}
+
+				else if (Number(ans2) >= 5000000 && Number(ans2) < 6000000){
+					output.innerHTML = "You should go for Porsche";
+				}
+
+				else if (Number(ans2) >= 6000000 && Number(ans2) < 7000000){
+					output.innerHTML = "You should go for Ferrari";
+				}
+
+				else if (Number(ans2) >= 7000000 && Number(ans2) < 8000000){
+					output.innerHTML = "You should go for BMW";
+				}
+
+				else if (Number(ans2) >= 8000000 && Number(ans2) < 9000000){
+					output.innerHTML = "You should go for Audi";
+				}
+
+				else if (Number(ans2) >= 9000000 && Number(ans2) < 1000000){
+					output.innerHTML = "You should go for Koenigsegg";
+				}
+
+				else if (Number(ans2) >= 10000000){
+					output.innerHTML = "You should go for Bugatti";
+				}
+				localStorage.clear();
+			}
+
+			else{
+				if (Number(ans2) >= 1000000 && Number(ans2) < 2000000){
+						output.innerHTML = "You should go for CCTV";
+				}
+
+				else if (Number(ans2) >= 2000000 && Number(ans2) < 3000000){
+					output.innerHTML = "You should go for Guard";
+				}	
+
+				else if (Number(ans2) >= 3000000 && Number(ans2) < 4000000){
+					output.innerHTML = "You should go for Delivery Man";
+				}
+
+				else if (Number(ans2) >= 4000000 && Number(ans2) < 5000000){
+					output.innerHTML = "You should go for Super Drone";
+				}
+
+				else if (Number(ans2) >= 5000000 && Number(ans2) < 6000000){
+					output.innerHTML = "You should go for Pet Dog";
+				}
+
+				else if (Number(ans2) >= 6000000 && Number(ans2) < 7000000){
+					output.innerHTML = "You should go for AI Human";
+				}
+
+				else if (Number(ans2) >= 7000000 && Number(ans2) < 8000000){
+					output.innerHTML = "You should go for Worker";
+				}
+
+				else if (Number(ans2) >= 8000000 && Number(ans2) < 9000000){
+					output.innerHTML = "You should go for Cleaner";
+				}
+
+				else if (Number(ans2) >= 9000000 && Number(ans2) < 10000000){
+					output.innerHTML = "You should go for Lazer Arm";
+				}
+
+				else if (Number(ans2) > 10000000){
+					output.innerHTML = "You should go for Wizard";
+				}
+				localStorage.clear();
+			}
+		}
+	</script>
+	<style type="text/css">
+		body{
+			background-image: url(https://themepack.me/i/c/749x468/media/g/149/iron-man-theme-3.jpg);
+			background-repeat: no-repeat;
+			background-size: 1600px;
+			display: flex;
+			justify-content: center;
+ 		}
+
+ 		h1{
+ 			margin-top: 5px;
+ 			font-size: 50px;
+ 		}
+
+ 		.flex{
+ 			background-color: grey;
+ 			box-shadow: 5px 5px 20px black;
+ 			border-radius: 50px;
+ 			padding: 50px 200px 200px 200px;
+ 			margin-top: 100px;
+ 			text-align: center;
+ 		}
+
+ 		#result{
+ 			font-size: 50px;
+ 		}
+
+ 		#ans, placeholder{
+ 			font-size: 30px;
+ 			margin-top: 50px;
+ 			text-align: center;
+ 			border: none;
+ 			width: 600px;
+ 		}
+ 		.answer{
+ 			margin-top: 50px;
+ 			font-size: 30px;
+ 		}
+
+ 		button{
+ 			padding: 10px 60px 10px 60px;
+ 			font-size: 15px;
+ 			border-radius: 20px;
+ 			box-shadow: 2px 2px 5px black;
+ 		}
+
+ 		button:active{
+ 			transform: scale(0.9);
+ 		}
+
+ 		button:focus{
+ 			outline: none;
+ 		}
+
+ 		input:focus{
+ 			outline: none;
+ 		}
+
+ 		button:hover{
+ 			transform: scale(0.95);
+ 		}
+	</style>
+
+</body>
+</html>

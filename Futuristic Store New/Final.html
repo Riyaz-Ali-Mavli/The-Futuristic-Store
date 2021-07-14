@@ -1,0 +1,291 @@
+<!DOCTYPE html>	
+<html>
+<head>
+	<title>Checkout</title>
+</head>
+<body>
+	<input type="text" id="input" placeholder="enter code">
+	
+	<button id="enter">Enter</button>
+	<div>
+	<table class = "first">
+		
+	</table>
+	<table class = "second">
+		
+	</table>
+	</div>
+	<button id = "home" onclick="document.location='file:///C:/Users/pc/Desktop/Riyaz%20Ali%20Mavli/udemy/Web%20Development/My%20Project/Futuristic%20Store%20New/Futuristic%20Store.html'">Home</button>
+
+	<script type="text/javascript">
+		var input = document.getElementById("input");
+		var enter = document.querySelector("#enter");
+		var refresh = document.querySelector("#refresh");
+		var table = document.querySelector(".first");
+		var table1 = document.querySelector(".second");
+		var total = document.querySelector("#total");
+
+		function clearTextField(){
+			input.value = "";
+		}
+
+		function addItem(){
+			var img1 = document.createElement("iframe");
+			var tr = document.createElement("tr");
+			var td1 = document.createElement("td");
+			var tr1 = document.createElement("tr");
+			var td3 = document.createElement("td");
+			var tr2 = document.createElement("tr");
+			var td4 = document.createElement("td");
+			var button1 = document.createElement("button");
+			var button2 = document.createElement("button");
+
+			img1.style.width="1200px";
+			img1.style.height="200px";
+			img1.style.boxShadow = "5px " + "5px " + "30px " + "black";
+			img1.style.borderRadius = "20px";
+			td1.appendChild(img1);
+			tr.appendChild(td1);
+			table.appendChild(tr);
+
+			button1.innerHTML = "Pay with Bank";
+			button2.innerHTML = "Pay with Bitcoin";
+			button1.addEventListener("click", () => {
+			document.location = "https://retail.onlinesbi.com/retail/login.htm"
+			});
+			button2.addEventListener("click", () => {
+			document.location = "https://bitcoin.org/en/bitcoin-for-individuals#:~:text=Mobile%20payments%20made%20easy&text=There's%20no%20need%20to%20sign,(using%20NFC%20radio%20technology)."
+			});
+			button1.style.fontSize = "20px";
+			button2.style.fontSize = "20px";
+			button2.style.marginTop = "30px";
+			button1.style.padding = "5px " + "500px " + "5px " + "500px";
+			button2.style.padding = "5px " + "495px " + "5px " + "495px";
+			button1.style.boxShadow = "2px " + "5px " + "10px " + "black";
+			button1.style.borderRadius = "20px";
+			button2.style.boxShadow = "2px " + "5px " + "10px " + "black";
+			button2.style.borderRadius = "20px";
+			button1.style.outline = "none";
+			button2.style.outline = "none";
+ 			td3.appendChild(button1);
+			td4.appendChild(button2);
+			tr1.appendChild(td3);
+			tr2.appendChild(td4);
+			table1.appendChild(tr1);
+			table1.appendChild(tr2);
+
+
+			if(input.value.toLowerCase() == "022corvette"){
+				
+				img1.src = "https://sketchfab.com/models/edabade6d6074197ba73a52809e398a4/embed?autospin=0.2&amp;autostart=1&amp;preload=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $1 Million"));
+			}
+
+			else if(input.value.toLowerCase() == "015lambo"){
+				img1.src = "https://sketchfab.com/models/c2366f3d17f54276be569efec1a93561/embed?autostart=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $2 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "086astonmartin"){
+				img1.src = "https://sketchfab.com/models/e82e2c0d17d14a2582804c785c5ceeb0/embed?autostart=0&amp;ui_controls=0&amp;ui_infos=0&amp;ui_inspector=0&amp;ui_stop=0&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $3 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "097merc"){
+				img1.src = "https://sketchfab.com/models/35eba36bf67646469141d57ad919af13/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $4 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "076porsche"){
+				img1.src = "https://sketchfab.com/models/b843bfde5fc14f58aacb08eda1af2048/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $5 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "036ferrari"){
+				img1.src = "https://sketchfab.com/models/1d4e41c390d1436f80510dd6b71c1290/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $6 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "148bmw"){
+				img1.src = "https://sketchfab.com/models/55e3232fbefe48ae9f9dbe316ae4d1f0/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $7 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "092audi"){
+				img1.src = "https://sketchfab.com/models/55fbdd1f576249fba61312f7d64074fc/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $8 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "036koen"){
+				img1.src = "https://sketchfab.com/models/b4e5a4c5fa5d4d45acd6715d3325254f/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $9 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "056bugatti"){
+				img1.src = "https://sketchfab.com/models/ae41e4f5165047c1bea901f9913d6390/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $10 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "032cctv"){
+				img1.src = "https://sketchfab.com/models/2024ac9f6fa34339881719d1a0136058/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $1 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "015guard"){
+				img1.src = "https://sketchfab.com/models/0f9c08f0d8d94f3a9938d4d8bf423f46/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $2 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "086deli"){
+				img1.src = "https://sketchfab.com/models/7489bc6d64214b9d9c9b0a127591858f/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $3 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "097sd"){
+				img1.src = "https://sketchfab.com/models/c45a7e1ddcc94fe496c214bba8ca4ee6/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $4 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "097pd"){
+				img1.src = "https://sketchfab.com/models/af42f770355a47f1b404aa4f993e03bf/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $5 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "036aih"){
+				img1.src = "https://sketchfab.com/models/6ac168305aab41c6aefb941d120b3230/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $6 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "148worker"){
+				img1.src = "https://sketchfab.com/models/8d06874aac5246c59edb4adbe3606e0e/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $7 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "092cleaner"){
+				img1.src = "https://sketchfab.com/models/a9eff86e49d34b3598bd2b628fdbc710/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $8 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "036lazer"){
+				img1.src = "https://sketchfab.com/models/50c5f21c338649bfa70c3b141bfed551/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $9 Million\n"));
+			}
+
+			else if(input.value.toLowerCase() == "022wizard"){
+				img1.src = "https://sketchfab.com/models/84dee578d62a4a519c2fc323f9bdb29f/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				td1.appendChild(document.createTextNode("Worth : $10 Million\n"));
+			}
+
+			else{
+				td1.appendChild(document.createTextNode("Invalid code"));
+			}
+
+			clearTextField();
+		}
+
+		function mouseUse(event){
+			if(input.value[0] != " " && input.value.length > 0){
+				table.innerHTML = "";
+				table1.innerHTML = "";
+				addItem();
+			}
+
+			clearTextField();
+		}
+
+
+		function keyUse(event){
+			if(event.keyCode == 13){
+				if(input.value[0] != " " && input.value.length > 0){
+					table.innerHTML = "";
+					table1.innerHTML = "";
+					addItem();
+				}
+				clearTextField();
+			}
+		}
+
+
+		enter.addEventListener("click", mouseUse);
+		input.addEventListener("keypress", keyUse);
+	</script>
+
+
+	<style type="text/css">
+		*{
+			text-align: center;
+		}
+
+		body{
+			background-image: url(https://themepack.me/i/c/749x468/media/g/149/iron-man-theme-3.jpg);
+			background-size: cover;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			display: grid;
+			grid-template-columns: repeat(10, 10%);
+			grid-template-rows: repeat(6, 30px);
+			grid-gap: 5px;
+		}
+
+		input{
+			grid-area: 1/3/2/7;
+			border-radius: 20px;
+			box-shadow: 2px 2px 10px black;
+		}
+
+		input:focus{
+			outline: none;
+		}
+
+		button{
+			border-radius: 20px;
+			box-shadow: 2px 2px 10px black;
+		}
+
+		button:hover{
+			transform: scale(0.95);
+			transition: 0.2s;
+		}
+
+		button:active{
+			transform: scale(0.9);
+		}
+
+		button:focus{
+			outline: none;
+		}
+
+		#enter{
+			grid-area: 1/7/2/8;
+		}
+
+		#home{
+			grid-area: 1/8/2/9;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		table{
+			margin-top: 100px;
+			margin-left: 200px;
+			width: 1200px;
+		}
+
+		td{
+			font-size: 30px;
+			font-weight: bold;
+			animation: slideHim 0.7s ease;
+		}
+
+		@keyframes slideHim{
+			0%{
+				transform: translateY(200px);
+				opacity: 0;
+			}
+		}
+	</style>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Robots</title>
+</head>
+<body>
+	<select id = "input">
+		<option>Select</option>
+		<option>CCTV</option>
+		<option>Guard</option>
+		<option>Delivery Man</option>
+		<option>Super Drone</option>
+		<option>Pet Dog</option>
+		<option>AI Human</option>
+		<option>Worker</option>
+		<option>Cleaner</option>
+		<option>Lazer Arm</option>
+		<option>Wizard</option>
+	</select>
+	<button id="enter">Enter</button>
+	<div>
+	</div>
+	<button id="check" onclick="document.location = 'C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Final.html'">Check Out</button>
+	<button id = "home" onclick="document.location = 'file:///C:/Users/pc/Desktop/Riyaz%20Ali%20Mavli/udemy/Web%20Development/My%20Project/Futuristic%20Store%20New/Futuristic%20Store.html'">Home</button>
+	<button id = "chat" onclick="document.location = 'file:///C:/Users/pc/Desktop/Riyaz%20Ali%20Mavli/udemy/Web%20Development/My%20Project/Futuristic%20Store%20New/Chat.html'">Bot Assitance</button>
+
+	<script type="text/javascript">	
+		var input = document.getElementById("input");
+		var enter = document.querySelector("#enter");
+		var body = document.querySelector("body");
+		var table = document.createElement("table");
+		var div = document.querySelector("div");
+		var chat = document.querySelector("#chat");
+
+		function clearTextField(){
+			input.value = "Select";
+		}
+
+		function addItem(){
+			table.innerHTML = "";
+			var img1 = document.createElement("iframe");
+			var tr = document.createElement("tr");
+			var td1 = document.createElement("td");
+			var td2 = document.createElement("td");
+			var data = document.createElement("pre");
+			var audio = document.createElement("audio");
+			var source = document.createElement("source");
+			var copyButton = document.createElement("button");
+			var inputCode = document.createElement("input");
+
+			inputCode.readOnly = true;
+			copyButton.innerHTML = "Copy Code";
+			copyButton.style.boxShadow = "2px " + "2px " + "5px " + "black";
+			img1.style.width="840px";
+			img1.style.height="500px";
+			data.style.textAlign = "left";
+			td1.appendChild(img1);
+			td2.appendChild(data);
+			tr.appendChild(td1);
+			tr.appendChild(td2);
+			table.appendChild(tr);
+			div.appendChild(table);
+
+			function voice(){
+					source.type = "audio/mpeg";
+					audio.autoplay = true;
+					audio.appendChild(source);
+					td2.appendChild(audio);
+				}
+
+
+			if(input.value.toLowerCase() == "cctv"){
+				img1.src = "https://sketchfab.com/models/2024ac9f6fa34339881719d1a0136058/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				inputCode.value = "032cctv";
+				source.src = "C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Audio Files/Robots/audio1.mp3";
+				data.appendChild(document.createTextNode("Brand : Cameron\n"));
+				data.appendChild(document.createTextNode("Work : Security\n"));
+				data.appendChild(document.createTextNode("Price : $1 Million\n\n\n"));
+				data.appendChild(document.createTextNode("Description : Records every \n surrounding activity\n\n"));
+			}
+
+			else if(input.value.toLowerCase() == "guard"){
+				img1.src = "https://sketchfab.com/models/0f9c08f0d8d94f3a9938d4d8bf423f46/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				inputCode.value = "015guard";
+				source.src = "C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Audio Files/Robots/audio2.mp3";
+					
+				data.appendChild(document.createTextNode("Brand : Protect Works Ltd.\n"));
+				data.appendChild(document.createTextNode("Work : Personal Guard\n"));
+				data.appendChild(document.createTextNode("Price : $2 Million\n\n\n"));
+				data.appendChild(document.createTextNode("Description : Works as a\nbody guard\n\n"));
+			}
+
+			else if(input.value.toLowerCase() == "delivery man"){
+				img1.src = "https://sketchfab.com/models/7489bc6d64214b9d9c9b0a127591858f/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				inputCode.value = "086deli";
+				source.src = "C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Audio Files/Robots/audio3.mp3";
+					
+				data.appendChild(document.createTextNode("Brand : Uber\n"));
+				data.appendChild(document.createTextNode("Work : Delivery\n"));
+				data.appendChild(document.createTextNode("Price : $3 Million\n\n\n"));
+				data.appendChild(document.createTextNode("Description : Delivers\nproduct from one place to\nanother\n\n"));
+			}
+
+			else if(input.value.toLowerCase() == "super drone"){
+				img1.src = "https://sketchfab.com/models/c45a7e1ddcc94fe496c214bba8ca4ee6/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				inputCode.value = "097sd";
+				source.src = "C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Audio Files/Robots/audio4.mp3";
+					
+				data.appendChild(document.createTextNode("Brand : AI Drones\n"));
+				data.appendChild(document.createTextNode("Work : Arial Delivery\n"));
+				data.appendChild(document.createTextNode("Work : Arial Recording\n"));
+				data.appendChild(document.createTextNode("Price : $4 Million\n\n\n"));
+				data.appendChild(document.createTextNode("Description : Delivers\nproduct from one place to\nanother by air and also\nprovide arial videos\n\n"));
+			}
+
+			else if(input.value.toLowerCase() == "pet dog"){
+				img1.src = "https://sketchfab.com/models/af42f770355a47f1b404aa4f993e03bf/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				inputCode.value = "097pd";
+				source.src = "C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Audio Files/Robots/audio5.mp3";
+					
+				data.appendChild(document.createTextNode("Brand : AI Dogs\n"));
+				data.appendChild(document.createTextNode("Work : Watch Dog\n"));
+				data.appendChild(document.createTextNode("Price : $5 Million\n\n\n"));
+				data.appendChild(document.createTextNode("Description : Records all\nsuspiciuos activities\nand protect surroundings\n\n"));
+			}
+
+			else if(input.value.toLowerCase() == "ai human"){
+				img1.src = "https://sketchfab.com/models/6ac168305aab41c6aefb941d120b3230/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				inputCode.value = "036aih";
+				source.src = "C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Audio Files/Robots/audio6.mp3";
+		
+				data.appendChild(document.createTextNode("Brand : AI Doctors\n"));
+				data.appendChild(document.createTextNode("Work : Human Clone\n"));
+				data.appendChild(document.createTextNode("Price : $6 Million\n\n\n"));
+				data.appendChild(document.createTextNode("Description : It can do\nevery work that a human\ncan\n\n"));
+			}
+
+			else if(input.value.toLowerCase() == "worker"){
+				img1.src = "https://sketchfab.com/models/8d06874aac5246c59edb4adbe3606e0e/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				inputCode.value = "148worker";
+				source.src = "C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Audio Files/Robots/audio7.mp3";
+					
+				data.appendChild(document.createTextNode("Brand : Extreme AI\n"));
+				data.appendChild(document.createTextNode("Work : Aviation Helper\n"));
+				data.appendChild(document.createTextNode("Price : $7 Million\n\n\n"));
+				data.appendChild(document.createTextNode("Description : It helps for\nwork in aviation and shipping\nfactories\n\n"));
+			}
+
+			else if(input.value.toLowerCase() == "cleaner"){
+				img1.src = "https://sketchfab.com/models/a9eff86e49d34b3598bd2b628fdbc710/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				inputCode.value = "092cleaner";
+				source.src = "C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Audio Files/Robots/audio8.mp3";
+					
+				data.appendChild(document.createTextNode("Brand : Clearone\n"));
+				data.appendChild(document.createTextNode("Work : Cleaner\n"));
+				data.appendChild(document.createTextNode("Price : $8 Million\n\n\n"));
+				data.appendChild(document.createTextNode("Description : It helps for\ncleaning work\n\n"));
+			}
+
+			else if(input.value.toLowerCase() == "lazer arm"){
+				img1.src = "https://sketchfab.com/models/50c5f21c338649bfa70c3b141bfed551/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				inputCode.value = "036lazer";
+				source.src = "C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Audio Files/Robots/audio9.mp3";
+					
+				data.appendChild(document.createTextNode("Brand : Auto Arm\n"));
+				data.appendChild(document.createTextNode("Work : Lazer Beam\n"));
+				data.appendChild(document.createTextNode("Price : $9 Million\n\n\n"));
+				data.appendChild(document.createTextNode("Description : It emits hot\nlazer beam to draw on designs\non metal sheets\n\n"));
+			}
+
+			else if(input.value.toLowerCase() == "wizard"){
+				img1.src = "https://sketchfab.com/models/84dee578d62a4a519c2fc323f9bdb29f/embed?autostart=0&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1";
+				inputCode.value = "022wizard";
+				source.src = "C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Audio Files/Robots/audio10.mp3";
+				data.appendChild(document.createTextNode("Brand : Plasma\n"));
+				data.appendChild(document.createTextNode("Work : Industrial Work\n"));
+				data.appendChild(document.createTextNode("Price : $10 Million\n\n\n"));
+				data.appendChild(document.createTextNode("Description : It is a multi-\ntasking robot that can perform\nvarious industrial and\nhazarduous processes\n\n"));
+			}
+
+			else{
+				source.src = "C:/Users/pc/Desktop/Riyaz Ali Mavli/udemy/Web Development/My Project/Futuristic Store New/Audio Files/Invalid input/Record1.mp3";
+				setTimeout(voice, 1000);
+			}
+
+			data.appendChild(inputCode);
+			data.appendChild(copyButton);
+			copyButton.addEventListener("click", () => {
+				inputCode.select();
+				document.execCommand("copy");
+				alert("Copied the text: " + inputCode.value);
+			});
+
+			clearTextField();
+			setTimeout(voice, 10000);
+		}
+
+		function mouseUse(){
+			// if(input.value[0] != " " && input.value.length > 0){
+				
+			// }
+			addItem();
+			clearTextField();
+		}
+
+
+		function keyUse(event){
+			if(event.keyCode == 13){
+				// if(input.value[0] != " " && input.value.length > 0){
+					
+				// }
+				table.innerHTML = "";
+				addItem();
+				clearTextField();
+			}
+		}
+
+
+		enter.addEventListener("click", mouseUse);
+		input.addEventListener("keypress", keyUse);
+		chat.addEventListener("click", () => {
+			window.localStorage.setItem("value", "robot");
+		});
+	</script>
+
+
+	<style type="text/css">
+		*{
+			text-align: center;
+		}
+
+		body{
+			background-image: url(https://themepack.me/i/c/749x468/media/g/149/iron-man-theme-3.jpg);
+			background-size: cover;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			display: grid;
+			grid-template-columns: repeat(10, 10%);
+			grid-template-rows: repeat(6, 30px);
+			grid-gap: 5px;
+		}
+
+		select{
+			border-radius: 20px;
+			box-shadow: 2px 2px 10px black;
+		}
+		select:focus{
+			outline: none;
+		}
+
+		button{
+			border-radius: 20px;
+			box-shadow: 2px 2px 10px black;
+		}
+
+		button:hover{
+			transform: scale(0.9);
+			transition: 0.5s;
+		}
+
+		button:active{
+			transform: scale(0.8);
+		}
+
+		button:focus{
+			outline: none;
+		}
+
+		#input{
+			grid-area: 1/3/2/7;
+		}
+
+		#enter{
+			grid-area: 1/7/2/8;
+		}
+
+		#chat{
+			grid-area: 1/8/2/9;
+		}
+
+		#check{
+			grid-area: 1/9/2/10;
+		}
+
+		#home{
+			grid-area: 1/2/2/3;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		table{
+			text-align: center;
+			margin-top: 100px;
+			margin-left: 200px;
+			width: 1200px;
+			box-shadow: 5px 5px 30px black;
+			border-radius: 20px;
+			background-image: url(https://coolbackgrounds.io/images/backgrounds/white/white-radial-gradient-a5802da1.jpg);
+			animation: slideHim 0.7s ease;
+			padding: 10px 20px 10px 20px;
+		}
+
+		pre{
+			font-size: 30px;
+			font-weight: bold;
+		}
+
+		@keyframes slideHim{
+			0%{
+				transform: translateY(500px);
+				opacity: 0;
+			}
+		}
+	</style>
+</body>
+</html>
